@@ -8,7 +8,6 @@ $hostsFile = "$env:SystemRoot\System32\drivers\etc\hosts"
 foreach ($site in $sites) {
     # Supprimer l'entrée du fichier HOSTS, si elle existe
     (Get-Content $hostsFile) | Where-Object { $_ -notmatch "^127\.0\.0\.1\s+$site" } | Set-Content $hostsFile
-    Write-Host "Le site $site a été débloqué."
 }
 
 Write-Host "La suppression des entrées a été effectuée. Les sites spécifiés sont maintenant accessibles."
