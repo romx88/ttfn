@@ -7,13 +7,21 @@ $hostsFile = "$env:SystemRoot\System32\drivers\etc\hosts"
 # Adresse IP locale (peut être modifiée selon vos besoins)
 $redirectIP = "127.0.0.1"
 
+# Lire tout le contenu du fichier HOSTS
+$currentContent = Get-Content $hostsFile -Raw
+
 # Parcourir la liste des sites à bloquer
 foreach ($site in $sites) {
-    # Ajouter une entrée dans le fichier HOSTS pour rediriger le site vers l'adresse IP locale
-    Add-Content -Path $hostsFile -Value "`n$redirectIP $site"
+    # Vérifier si l'entrée existe déjà dans le fichier HOSTS
+    $existingEntry = "$redirectIP $site"
+    
+    if ($currentContent -notlike "*$existingEntry*") {
+        # Ajouter une entrée dans le fichier HOSTS pour rediriger le site vers l'adresse IP locale
+        $currentContent += "`n$redirectIP $site"
+    }
 }
 
-# Fermer le fichier HOSTS
-(Get-Content $hostsFile).Close()
+# Réécrire le fichier HOSTS avec le nouveau contenu
+Set-Content -Path $hostsFile -Value $currentContent
 
 Write-Host "Tout trafic sortant vers les sites bloqués est maintenant redirigé vers l'adresse IP locale."
