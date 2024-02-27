@@ -13,4 +13,7 @@ foreach ($site in $sites) {
     Add-Content -Path $hostsFile -Value "`n$redirectIP $site"
 }
 
+# Fermer le fichier HOSTS
+(Get-Content $hostsFile).Close()
+
 Write-Host "Tout trafic sortant vers les sites bloqués est maintenant redirigé vers l'adresse IP locale."
