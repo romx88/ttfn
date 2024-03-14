@@ -19,19 +19,19 @@ pause
 goto menu
 
 :change_wallpaper
-powershell.exe -ExecutionPolicy Bypass -File "C:\Users\romx\OneDrive - Ynov\Documents\ttfn\windows\deblockChangeBackground.ps1"
+powershell.exe -ExecutionPolicy Bypass -File "D:\ttfn\windows\deblockChangeBackground.ps1"
 echo Fond d'écran actualiser.
 pause
 goto menu
 
 :block_internet
-powershell.exe -ExecutionPolicy Bypass -File "C:\Users\romx\OneDrive - Ynov\Documents\ttfn\windows\piratage.ps1"
+powershell.exe -ExecutionPolicy Bypass -File "D:\ttfn\windows\piratage.ps1"
 echo Internet débloqué.
 pause
 goto menu
 
 :spawn_goose
-start "Ca va mieux" cmd /c "C:\Users\romx\OneDrive - Ynov\Documents\ttfn\windows\Desktop Goose v0.31\DesktopGoose v0.31\Close Goose.bat"
+start "Ca va mieux" cmd /c "D:\ttfn\windows\Desktop Goose v0.31\DesktopGoose v0.31\Close Goose.bat"
 echo Oie disparu.
 pause
 goto menu

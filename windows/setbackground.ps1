@@ -1,4 +1,4 @@
-$newWallpaper = "C:\Users\romx\OneDrive - Ynov\Documents\ttfn\background.jpg"
+$newWallpaper = "D:\ttfn\windows/background"
 $SPI_SETDESKWALLPAPER = 20
 $UpdateIniFile = 0x01
 $SendChange = 0x02
