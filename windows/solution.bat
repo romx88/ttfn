@@ -21,20 +21,20 @@ pause
 goto menu
 
 :change_wallpaper
-powershell.exe -ExecutionPolicy Bypass -File "C:\Users\romx\OneDrive - Ynov\Documents\ttfn\windows\setbackground.ps1"
-powershell.exe -ExecutionPolicy Bypass -File "C:\Users\romx\OneDrive - Ynov\Documents\ttfn\windows\blockChangeBackground.ps1"
+powershell.exe -ExecutionPolicy Bypass -File "D:\ttfn\windows\setbackground.ps1"
+powershell.exe -ExecutionPolicy Bypass -File "D:\ttfn\windows\blockChangeBackground.ps1"
 echo Fond d'écran changé.
 pause
 goto menu
 
 :block_internet
-powershell.exe -ExecutionPolicy Bypass -File "C:\Users\romx\OneDrive - Ynov\Documents\ttfn\windows\solution.ps1"
+powershell.exe -ExecutionPolicy Bypass -File "D:\ttfn\windows\solution.ps1"
 echo Internet bloqué.
 pause
 goto menu
 
 :spawn_goose
-start "TTNF = Tu T'es Fait Niquer" cmd /c "C:\Users\romx\OneDrive - Ynov\Documents\ttfn\windows\Desktop Goose v0.31\DesktopGoose v0.31\GooseDesktop.exe"
+start "TTNF = Tu T'es Fait Niquer" cmd /c "D:\ttfn\windows\Desktop Goose v0.31\DesktopGoose v0.31\GooseDesktop.exe"
 echo Oie apparue.
 pause
 goto menu
